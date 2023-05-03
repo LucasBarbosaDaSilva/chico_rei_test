@@ -1,10 +1,30 @@
-@primary-color: #007bff;
+@primary-color: #e6e8eb;
+@font-family: 'Ysabeau', sans-serif;
+@mobile: 768px;
+@tablet: 768px;
+@desktop: 992px;
 
 .HomePage {
-  // Usar a variável de cor para definir o estilo
+  
   background-color: @primary-color;
+  font-family: @font-family;
+  margin: 0;
+  padding: 0;
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6vh;
+  font-size: 40px;
+
+  @media (max-width: @mobile) {
+    display: flex;
+  justify-content: center;
+  margin-bottom: 6vh;
+  font-size: 30px;
+  }
+}
 .home-page {
   display: flex;
   flex-wrap: wrap;
@@ -12,20 +32,195 @@
   align-items: center;
   margin: 20px 0;
 }
+
+//Container lista completa
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+//Container produto
+
 .product-item {
-  width: 30%;
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
+
+  @media (max-width: @mobile) {
+    width: calc(43.33% - 14px);
+  margin-bottom:10vh;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-left: 4vh;
+  align-items: center;
+  }
+
+  @media (min-width: @tablet) {
+    width: calc(33.33% - 14px);
+  margin-bottom:10vh;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-right: -5vh;
+  margin-left: 5vh;
+  
+  align-items: flex-end;
+  }
+
+  @media (min-width: @desktop) {
+    width: calc(33.33% - 14px);
+  margin-bottom:10vh;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-right: -5vh;
+  margin-left: 5vh;
+  
+  align-items: flex-end;
+  }
 }
+
+//Imagem do produto
+
 .product-item img {
-  width: 100%;
-  margin-bottom: 10px;
+  
+  @media (max-width: @mobile) {
+    width: 95%;
+    height: 50%; 
+    object-fit: cover;
+  }
+  
+  @media (min-width: @tablet) {
+    width: 65%;
+    height: 50%;
+    object-fit: cover;
+    margin-right: 10%;
+  }
+
+  @media (min-width: @desktop) {
+    width: 45%;
+    height: 110%;
+    object-fit: cover;
+    margin-right: 2%;
+    border-radius: 1px;
+  }
 }
-.product-item h2 {
-  font-size: 20px;
-  margin-bottom: 5px;
+
+//Informações do produto
+
+.product-item-info {
+
+  @media (max-width: @mobile) {
+    width: 95%;
+  }
+
+  @media (min-width: @tablet) {
+    width: 65%;
+  }
+  
+  @media (min-width: @desktop) {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 110%; 
+    margin-left: 1vh;
+  }
+
 }
-.product-item p {
-  margin: 5px 0;
+
+//Nome
+
+.product-name {
+
+  @media (max-width: @mobile) {
+    max-height: 7vh;
+    display: flex;
+  }
+
+  @media (min-width: @tablet) {
+    max-height: 6vh;
+    display: flex;
+  }
+
+  @media (min-width: @desktop) {
+    max-height: 8vh;
+    display: flex;
+  }
 }
+
+.product-name h2 {
+
+  @media (max-width: @mobile) {
+    font-size: 13px;
+  margin-bottom: 5vh;
+  }
+
+  @media (min-width: @tablet) {
+    font-size: 17px;
+  margin-bottom: 5vh;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 20px;
+  margin-bottom: 5vh;
+  }
+}
+
+//Descrição
+
+.product-description {
+
+  @media (max-width: @mobile) {
+    min-height: 18vh;
+    display: flex;
+  }
+
+  @media (min-width: @tablet) {
+    min-height: 15vh;
+    display: flex;
+  }
+
+  @media (min-width: @desktop) {
+    min-height: 20vh;
+    display: flex;
+    margin-bottom: 15vh;
+    
+  }
+}
+
+.description{
+
+  @media (max-width: @mobile) {
+    font-size: 12px;
+  }
+
+  @media (min-width: @tablet) {
+    font-size: 14px;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 19px;
+  }
+}
+
+//Preço
+
+.product-price {
+  @media (min-width: @desktop) {
+    display: flex;
+  }
+}
+
+.value {
+  @media (max-width: @mobile) {
+    font-size: 14px;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 23px;
+    
+  }
+  
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@200;300;400;500;600&display=swap');

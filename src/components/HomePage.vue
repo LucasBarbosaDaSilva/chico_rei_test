@@ -3,12 +3,22 @@
 
     <h1>Camisetas</h1>
     <div class="home-page">
+      <div class="product-list">
     <div v-for="product in products" :key="product.id" class="product-item">
       <img :src="product.image" />
-      <h2>{{ product.name }}</h2>
-      <p>{{ product.description }}</p>
-      <p>{{ product.price }}</p>
+      <div class="product-item-info">
+        <div class="product-name"> 
+          <h2>{{ product.name }}</h2>
+        </div>
+        <div class="product-description"> 
+          <p class="description">{{ product.description }}</p>
+        </div>
+        <div class="product-price"> 
+          <p class="value">R${{ product.price }}</p>
+        </div>
     </div>
+    </div>
+  </div>
   </div>
   </div>
  </template>
