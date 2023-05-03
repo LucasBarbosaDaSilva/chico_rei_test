@@ -1,5 +1,8 @@
 <template>
-  <h1>Hello World com Vue!</h1>
+  <div class="HomePage">
+
+    <h1>Hello World com Vue!</h1>
+  </div>
  </template>
  
  <script>
@@ -12,6 +15,7 @@
  </script>
  
  
- <style scoped>
+ <style lang="less">
+  @import "../assets/styles/Homepage.less";
  
  </style>
