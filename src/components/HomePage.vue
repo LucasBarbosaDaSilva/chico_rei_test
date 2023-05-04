@@ -1,4 +1,5 @@
 <template>
+  <nav-bar></nav-bar>
   <div class="container-select">
     <select v-model="selectedRoute" @change="updateSelectedRoute" v-if="!loading" class="route-select">
       <option v-for="route in routes" :value="route.path" :key="route.path">{{ route.name }}</option>
@@ -9,8 +10,12 @@
 </template>
 
 <script>
+import NavBar from './NavBar.vue';
 export default {
   name: 'HomePage',
+  components: {
+    NavBar
+  },
   data() {
     return {
       selectedRoute: '/',
@@ -36,13 +41,18 @@ export default {
 </script>
 
 <style lang="less">
-@import "../assets/styles/Homepage.less";
+
 @font-family: 'Ysabeau', sans-serif;
+@mobile: 768px;
+@tablet: 768px;
+@desktop: 992px;
 
 .container-select {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 7vh;
+  padding: 0;
 }
 
 .route-select {
