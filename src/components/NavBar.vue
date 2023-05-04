@@ -41,7 +41,7 @@ export default {
 @tablet: 768px;
 @desktop: 992px;
 
-@keyframes slide-in {
+@keyframes navbar-animation {
   from {
     transform: translateX(-100%);
   }

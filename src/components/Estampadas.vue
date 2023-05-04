@@ -25,6 +25,8 @@
  
  <script>
  import { faker } from '@faker-js/faker';
+ import estampada from '../assets/camisetas/estampada.png'
+
  export default {
    name: 'CamisetaEstampada',
    props: {
@@ -32,6 +34,7 @@
    },
    data() {
     return {
+      imagens: [estampada],
       products: []
     };
   },
@@ -44,7 +47,7 @@
         const product = {
           id: i,
           name: faker.commerce.productName(),
-          image: faker.image.fashion(),
+          image: this.imagens,
           description: faker.commerce.productDescription(),
           price: faker.commerce.price()
         };

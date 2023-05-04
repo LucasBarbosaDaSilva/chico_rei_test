@@ -22,6 +22,7 @@ export default {
       routes: [
         { name: 'Camisetas', path: '/' },
         { name: 'Estampadas', path: '/estampadas' },
+        { name: 'Com Bolso', path: '/com-bolso' },
       ]
     }
   },

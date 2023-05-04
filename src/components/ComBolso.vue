@@ -1,7 +1,7 @@
 <template>
   <div class="HomePage">
 
-    <h1>Camisetas</h1>
+    <h1>Com Bolso</h1>
     <div class="home-page">
       <div class="product-list">
     <div v-for="product in products" :key="product.id" class="product-item">
@@ -25,33 +25,25 @@
  
  <script>
  import { faker } from '@faker-js/faker';
-//  import fotos from './Fotos.vue';
- import basic1 from '../assets/camisetas/basica1.png'
- 
+ import bolso from '../assets/camisetas/bolso.png'
 
  export default {
-   name: 'CamisetaBasica',
+   name: 'ComBolso',
    props: {
      msg: String
    },
    data() {
     return {
-      imagens: [basic1],
+      imagens: [bolso],
       products: []
-      
     };
   },
   mounted() {
     this.generateProducts();
   },
-
-  
-
   methods: {
-    
-
     generateProducts() {
-      for (let i = 0; i < 9; i++) {
+      for (let i = 0; i < 15; i++) {
         const product = {
           id: i,
           name: faker.commerce.productName(),
