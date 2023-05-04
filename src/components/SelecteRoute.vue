@@ -1,14 +1,16 @@
 <template>
-  <NavBar />
+  <div class="container-select">
+    <select v-model="selectedRoute" @change="updateSelectedRoute" v-if="!loading" class="route-select">
+      <option v-for="route in routes" :value="route.path" :key="route.path">{{ route.name }}</option>
+    </select>
+    <div v-else>Carregando...</div>
+    <router-view :key="selectedRoute" v-if="!loading"></router-view>
+  </div>
 </template>
 
 <script>
-import NavBar from './NavBar.vue';
 export default {
-  name: 'HomePage',
-  components: {
-    NavBar,
-  },
+  name: 'SelecteRoute',
   data() {
     return {
       selectedRoute: '/',

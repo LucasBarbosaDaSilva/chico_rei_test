@@ -1,4 +1,5 @@
 <template>
+  <SelecteRoute />
   <div class="HomePage">
 
     <h1>Camisetas</h1>
@@ -24,13 +25,16 @@
  </template>
  
  <script>
+ import SelecteRoute from './SelecteRoute.vue'
  import { faker } from '@faker-js/faker';
-//  import fotos from './Fotos.vue';
  import basic1 from '../assets/camisetas/basica1.png'
  
 
  export default {
    name: 'CamisetaBasica',
+   components: {
+    SelecteRoute,
+   },
    props: {
      msg: String
    },

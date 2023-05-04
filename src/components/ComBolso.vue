@@ -1,4 +1,5 @@
 <template>
+  <SelecteRoute />
   <div class="HomePage">
 
     <h1>Com Bolso</h1>
@@ -26,9 +27,13 @@
  <script>
  import { faker } from '@faker-js/faker';
  import bolso from '../assets/camisetas/bolso.png'
+import SelecteRoute from './SelecteRoute.vue';
 
  export default {
    name: 'ComBolso',
+   components: {
+    SelecteRoute,
+   },
    props: {
      msg: String
    },
@@ -43,7 +48,7 @@
   },
   methods: {
     generateProducts() {
-      for (let i = 0; i < 15; i++) {
+      for (let i = 0; i < 9; i++) {
         const product = {
           id: i,
           name: faker.commerce.productName(),

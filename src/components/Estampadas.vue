@@ -1,4 +1,5 @@
 <template>
+  <SelecteRoute />
   <div class="HomePage">
 
     <h1>Estampadas</h1>
@@ -24,11 +25,15 @@
  </template>
  
  <script>
+ import SelecteRoute from './SelecteRoute.vue'
  import { faker } from '@faker-js/faker';
  import estampada from '../assets/camisetas/estampada.png'
 
  export default {
    name: 'CamisetaEstampada',
+   components: {
+    SelecteRoute,
+   },
    props: {
      msg: String
    },
@@ -43,7 +48,7 @@
   },
   methods: {
     generateProducts() {
-      for (let i = 0; i < 15; i++) {
+      for (let i = 0; i < 9; i++) {
         const product = {
           id: i,
           name: faker.commerce.productName(),

@@ -11,7 +11,7 @@
           <router-link to="/" class="container-title-menu">Home</router-link>
         </li>
         <li>
-          <router-link to="/checkout" class="container-title-menu">Finalização de Pedidos</router-link>
+          <router-link to="/finalizar-pedido" class="container-title-menu">Finalização de Pedidos</router-link>
         </li>
       </ul>
     </div>
