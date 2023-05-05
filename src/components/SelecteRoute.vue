@@ -23,12 +23,10 @@ export default {
   },
   methods: {
     updateSelectedRoute() {
-      // Atualiza a rota selecionada e navega para a rota correspondente
       this.$router.push(this.selectedRoute);
     }
   },
   created() {
-    // Mostra a mensagem "Carregando..." por 1 segundo antes de exibir o conteúdo
     setTimeout(() => {
       this.loading = false;
     }, 1000);
@@ -48,7 +46,6 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-top: 10vh;
-  // background-color: red;
   padding: 0;
 }
 
