@@ -50,7 +50,7 @@
   <input type="text" id="card-cvc" v-model="cardCvc" @input="validarForm"/>
 </div>
   </div>
-  <button :disabled="!formValid" @click="finalizarPedido">Finalizar Pedido</button>
+  <button :disabled="!formValid" @click="finalizarPedido" class="button-finalizar-pedido">Finalizar Pedido</button>
     </div>
     <div> 
       <div class="container-produto-final"> 
