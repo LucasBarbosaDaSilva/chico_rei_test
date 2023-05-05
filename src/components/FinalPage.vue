@@ -50,10 +50,33 @@
   <input type="text" id="card-cvc" v-model="cardCvc" @input="validarForm"/>
 </div>
   </div>
-  <button :disabled="!formValid">Finalizar Pedido</button>
+  <button :disabled="!formValid" @click="finalizarPedido">Finalizar Pedido</button>
     </div>
     <div> 
-      <h1> Produto</h1>
+      <div class="container-produto-final"> 
+      </div>
+      <div v-for="product in products" :key="product.id" class="produto-final"> 
+        
+        <div> 
+          <h1> Sua sacola</h1>
+          <img :src="product.image" class="img-produto-final"/>
+        </div>
+        <div class="info-produto-final"> 
+          <div> 
+
+            <h2>{{ product.name }}</h2>
+            <p class="value">R${{ product.price * quantity }}</p>
+          </div>
+          <div class="counter">
+            <button @click="increaseQuantity" class="button-final1">+</button>
+            <span class="quantidade-final">{{ quantity }}</span>
+           <button @click="decreaseQuantity" class="button-final2">-</button>
+             
+           
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
   
@@ -62,6 +85,8 @@
 <script>
 import cepPromise from 'cep-promise'
 import lupa from '../assets/camisetas/lupa.png'
+import { faker } from '@faker-js/faker'
+import bolso from '../assets/camisetas/bolso.png'
 
 export default {
   name: 'FinalPage',
@@ -78,9 +103,53 @@ export default {
       cardCvc: '',
       formValid: false,
       lupa,
+      imagens: [bolso],
+      products: [],
+      quantity: 1,
+      totalPrice: 0,
+      
     }
   },
+  mounted() {
+    this.generateProducts();
+  },
   methods: {    
+
+
+    generateProducts() {
+      for (let i = 0; i < 1; i++) {
+        const product = {
+          id: i,
+          name: faker.commerce.productName(),
+          image: this.imagens,
+          price: faker.commerce.price()
+        };
+        this.products.push(product);
+        this.totalPrice = this.products[0].price;
+      }
+    
+    },
+    finalizarPedido() {
+      this.$swal({
+        title: 'Parabéns!',
+        text: 'Compra realizada com sucesso',
+        icon: 'success'
+      });
+      console.log(this.products);
+      console.log(`Preço total: ${this.totalPrice} `);
+    },
+
+    increaseQuantity() {
+      this.quantity++;
+      this.totalPrice = this.products[0].price * this.quantity;
+    },
+    decreaseQuantity() {
+      if (this.quantity > 1) {
+        this.quantity--;
+        this.totalPrice = this.products[0].price * this.quantity; // atualiza o preço total
+      }
+    },
+
     buscarEndereco() {
       this.carregando = true
       cepPromise(this.cep)
