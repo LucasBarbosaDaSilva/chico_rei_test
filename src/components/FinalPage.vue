@@ -136,6 +136,7 @@ export default {
         icon: 'success'
       });
       console.log(this.products);
+      console.log(`Quantidade: ${this.quantity} `);
       console.log(`Preço total: ${this.totalPrice} `);
     },
 
@@ -146,7 +147,7 @@ export default {
     decreaseQuantity() {
       if (this.quantity > 1) {
         this.quantity--;
-        this.totalPrice = this.products[0].price * this.quantity; // atualiza o preço total
+        this.totalPrice = this.products[0].price * this.quantity; 
       }
     },
 

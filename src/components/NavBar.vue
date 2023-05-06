@@ -133,7 +133,7 @@ export default {
   .navbar-button {
   position: absolute;
   top: 15%;
-  right: 20px; /* alterado */
+  right: 20px;
   width: 70px;
   height: 50px;
   border: none;
@@ -147,7 +147,7 @@ export default {
   position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg); // adicionei "rotate(0deg)" para corrigir a orientação do ícone
+    transform: translate(-50%, -50%) rotate(0deg);
     display: block;
     width: 30px;
     height: 2px;
@@ -202,7 +202,7 @@ export default {
   .navbar-button {
   position: absolute;
   top: 15%;
-  right: 20px; /* alterado */
+  right: 20px; 
   width: 70px;
   height: 50px;
   border: none;
@@ -216,7 +216,7 @@ export default {
   position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg); // adicionei "rotate(0deg)" para corrigir a orientação do ícone
+    transform: translate(-50%, -50%) rotate(0deg); 
     display: block;
     width: 30px;
     height: 2px;
@@ -272,7 +272,7 @@ export default {
   .navbar-button {
   position: absolute;
   top: 15%;
-  right: 20px; /* alterado */
+  right: 20px; 
   width: 70px;
   height: 50px;
   border: none;
@@ -286,7 +286,7 @@ export default {
   position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg); // adicionei "rotate(0deg)" para corrigir a orientação do ícone
+    transform: translate(-50%, -50%) rotate(0deg); 
     display: block;
     width: 30px;
     height: 2px;
@@ -332,14 +332,14 @@ export default {
   @media (max-width: @mobile) {
     position: fixed;
   top: 0;
-  left: -100%; // mudei o valor de "left" para "right"
+  left: -100%;
   width: 75%;
   height: 100%;
   background-color: #fff;
   transition: all 0.5s ease-in-out;
 
   &.active {
-    left: 0; // mudei o valor de "left" para "right"
+    left: 0;
   }
 
 .navbar-close {
@@ -413,14 +413,14 @@ ul {
   @media (min-width: @tablet){
     position: fixed;
   top: 0;
-  left: -100%; // mudei o valor de "left" para "right"
+  left: -100%; 
   width: 30%;
   height: 100%;
   background-color: #fff;
   transition: all 0.5s ease-in-out;
 
   &.active {
-    left: 0; // mudei o valor de "left" para "right"
+    left: 0; 
   }
 
 .navbar-close {
@@ -494,14 +494,14 @@ ul {
   @media (min-width: @desktop) {
   position: fixed;
   top: 0;
-  left: -100%; // mudei o valor de "left" para "right"
+  left: -100%; 
   width: 20%;
   height: 100%;
   background-color: #fff;
   transition: all 0.5s ease-in-out;
 
   &.active {
-    left: 0; // mudei o valor de "left" para "right"
+    left: 0; 
   }
 
 .navbar-close {
