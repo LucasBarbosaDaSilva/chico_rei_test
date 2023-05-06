@@ -1,6 +1,6 @@
 <h1>Chico Rei App_test</h1>
 
-<p>Este é um projeto criado com Vue.js que simula uma aplicação web de uma loja de roupas. A aplicação possui diferentes categorias como camisetas, estampadas, e com bolso. O projeto também conta com um menu lateral, e uma página de finalização de pedido, onde o usuário pode revisar os itens selecionados, alterar a quantidade e concluir a compra. Além disso, todo o conteúdo foi desenvolvido com responsividade em mente, garantindo uma experiência consistente e agradável em dispositivos desktop, tablet e mobile. O objetivo deste projeto é fornecer uma demonstração básica de como criar uma aplicação web utilizando o framework Vue.js, além de apresentar conceitos como componentização, rotas e gerenciamento de estado.</p>
+<p>Este é um projeto criado com Vue.js que simula uma aplicação web de uma loja de roupas. A aplicação possui diferentes categorias como camisetas, estampadas, e com bolso. O projeto também conta com um menu lateral, e uma página de finalização de pedido, onde o usuário pode revisar os itens selecionados, alterar a quantidade e concluir a compra. Além disso, todo o conteúdo foi desenvolvido com responsividade em mente utilizando CSS e LESS, garantindo uma experiência consistente e agradável em dispositivos desktop, tablet e mobile. O objetivo deste projeto é fornecer uma demonstração básica de como criar uma aplicação web utilizando o framework Vue.js, além de apresentar conceitos como componentização, rotas e gerenciamento de estado.</p>
 
 <h2>Instalação</h2>
 
