@@ -13,7 +13,7 @@
 
 <p>Primeiramente, faça o clone deste repositório:</p>
 
-<pre><code>git clone https://github.com/seu-usuario/teste-chico.git</code></pre>
+<pre><code>git clone git@github.com:LucasBarbosaDaSilva/chico_rei_test.git</code></pre>
 
 <p>Depois de clonar o repositório, acesse a pasta do projeto e instale as dependências com o seguinte comando:</p>
 
