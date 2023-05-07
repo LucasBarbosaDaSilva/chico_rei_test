@@ -17,7 +17,7 @@
 
 <p>Depois de clonar o repositório, acesse a pasta do projeto e instale as dependências com o seguinte comando:</p>
 
-<pre><code>cd teste-chico
+<pre><code>cd chico_rei_test
 npm install</code></pre>
 
 <h2>Executando o projeto</h2>
