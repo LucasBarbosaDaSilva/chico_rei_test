@@ -8,7 +8,7 @@
     <input type="email" id="email" v-model="email" @input="validarForm" />
 
     <label for="telefone">Telefone</label>
-    <input type="tel" id="telefone" placeholder="(00) 00000-0000" v-model="telefone" @input="validarForm" pattern="\(\d{2}\)\s\d{4,5}-?\d{4}" />
+    <input type="tel" id="telefone" v-mask="'(##) #####-####'" placeholder="(00) 00000-0000" v-model="telefone" @input="validarForm" pattern="\(\d{2}\)\s\d{4,5}-?\d{4}" />
   </div>
       <div class="contact">
     <h2>Informações de entrega</h2>
@@ -44,7 +44,7 @@
 <div class="city"> 
 
   <label for="card-expiration">Data de Vencimento</label>
-  <input type="text" id="card-expiration" placeholder="00/00" v-model="cardExpiration" @input="validarForm"/>
+  <input type="text" id="card-expiration" v-mask="'##/##'" placeholder="00/00" v-model="cardExpiration" @input="validarForm"/>
 
   <label for="card-cvc" id="cvc">CVC</label>
   <input type="text" id="card-cvc" v-model="cardCvc" @input="validarForm"/>
@@ -168,7 +168,7 @@ export default {
     validarForm() {
     // Validar campos de email e telefone
     const emailRegex = /\S+@\S+\.\S+/
-    const telefoneRegex = /^(\d{8}|\d{11})$/
+    const telefoneRegex = /^\(\d{2}\)\s\d{5}-\d{4}$/
     const emailValido = emailRegex.test(this.email)
     const telefoneValido = telefoneRegex.test(this.telefone)
     
